@@ -1,1 +1,6 @@
 # This is cool.
+
+List of things I study:
+- eEFSec
+-SBP2
+-SECIS
