@@ -1,0 +1,328 @@
+Last login: Mon Jun 24 13:16:58 on ttys001
+Motu:~ aditi$ cd /Desktop/swc_wise
+-bash: cd: /Desktop/swc_wise: No such file or directory
+Motu:~ aditi$ cd swc_wise
+-bash: cd: swc_wise: No such file or directory
+Motu:~ aditi$ cd Desktop
+Motu:Desktop aditi$ cd swc_wise
+Motu:swc_wise aditi$ ls
+Git_Cheat_Sheet_grey.pdf	science.txt
+Motu:swc_wise aditi$ git log
+commit 4720a04bf4f32f7b2d6c18d899cb0a7943c7ba69
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:38:50 2013 -0400
+
+    Removed experiments.txt
+
+commit 5810efbc5eb55b869741114db7c651d47833775f
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:36:29 2013 -0400
+
+    Added new file called experiments
+
+commit a39e84e525a0f5ead1f7fc502f3a01894d8a3604
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:35:51 2013 -0400
+
+    Added a new file called Git Cheat Sheet
+
+commit 1ec8b2b6ec0d01bf90b17ec6cb1dd79d9d9f3c6f
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:34:35 2013 -0400
+
+    Added more details of what I study to science.txt
+Motu:swc_wise aditi$ git checkout SBP2
+Switched to branch 'SBP2'
+Motu:swc_wise aditi$ git log
+commit 3f2cd33de74fe2758b1aed4d19ccf7513c900746
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 15:01:02 2013 -0400
+
+    Added new file to SBP2 branch.
+
+commit 4720a04bf4f32f7b2d6c18d899cb0a7943c7ba69
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:38:50 2013 -0400
+
+    Removed experiments.txt
+
+commit 5810efbc5eb55b869741114db7c651d47833775f
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:36:29 2013 -0400
+
+    Added new file called experiments
+
+commit a39e84e525a0f5ead1f7fc502f3a01894d8a3604
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:35:51 2013 -0400
+
+    Added a new file called Git Cheat Sheet
+Motu:swc_wise aditi$ 
+Motu:swc_wise aditi$ git branch
+* SBP2
+  development
+  eEFSec
+  master
+Motu:swc_wise aditi$ git checkout eEFSec
+Switched to branch 'eEFSec'
+Motu:swc_wise aditi$ git log
+commit 1757dd136ee4fd6137bd739159ee66b0b041fb46
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 15:03:21 2013 -0400
+
+    Added new file to eEFSec branch
+
+commit 4720a04bf4f32f7b2d6c18d899cb0a7943c7ba69
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:38:50 2013 -0400
+
+    Removed experiments.txt
+
+commit 5810efbc5eb55b869741114db7c651d47833775f
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:36:29 2013 -0400
+
+    Added new file called experiments
+
+commit a39e84e525a0f5ead1f7fc502f3a01894d8a3604
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:35:51 2013 -0400
+
+    Added a new file called Git Cheat Sheet
+Motu:swc_wise aditi$ 
+Motu:swc_wise aditi$ git checkout master
+Switched to branch 'master'
+Motu:swc_wise aditi$ git checkout SBP2
+Switched to branch 'SBP2'
+Motu:swc_wise aditi$ checkout master
+-bash: checkout: command not found
+Motu:swc_wise aditi$ git checkout master
+Switched to branch 'master'
+Motu:swc_wise aditi$ git merge eEFSec SPB2 -m "Merging eEFSec and SBP2 branches"fatal: SPB2 - not something we can merge
+Motu:swc_wise aditi$ git branch
+  SBP2
+  development
+  eEFSec
+* master
+Motu:swc_wise aditi$ git checkout SBP2
+Switched to branch 'SBP2'
+Motu:swc_wise aditi$ git merge eEFSec -m "Merging eEFSec and SBP2"
+Merge made by the 'recursive' strategy.
+ 0 files changed
+ create mode 100644 GTP_activity.txt
+Motu:swc_wise aditi$ git branch
+* SBP2
+  development
+  eEFSec
+  master
+Motu:swc_wise aditi$ git checkout SBP2
+Already on 'SBP2'
+Motu:swc_wise aditi$ ls
+GTP_activity.txt		science.txt
+Git_Cheat_Sheet_grey.pdf	structure.txt
+Motu:swc_wise aditi$ git checkout master
+Switched to branch 'master'
+Motu:swc_wise aditi$ git merge SBP2 -m "Merging SBP2 and master"
+Updating 4720a04..3a121d6
+Fast-forward (no commit created; -m option ignored)
+ 0 files changed
+ create mode 100644 GTP_activity.txt
+ create mode 100644 structure.txt
+Motu:swc_wise aditi$ git branch
+  SBP2
+  development
+  eEFSec
+* master
+Motu:swc_wise aditi$ ls
+GTP_activity.txt		science.txt
+Git_Cheat_Sheet_grey.pdf	structure.txt
+Motu:swc_wise aditi$ git branch -D eEFSec
+Deleted branch eEFSec (was 1757dd1).
+Motu:swc_wise aditi$ ls
+GTP_activity.txt		science.txt
+Git_Cheat_Sheet_grey.pdf	structure.txt
+Motu:swc_wise aditi$ git branch
+  SBP2
+  development
+* master
+Motu:swc_wise aditi$ git branch -D SBP2
+Deleted branch SBP2 (was 3a121d6).
+Motu:swc_wise aditi$ ls
+GTP_activity.txt		science.txt
+Git_Cheat_Sheet_grey.pdf	structure.txt
+Motu:swc_wise aditi$ git branch
+  development
+* master
+Motu:swc_wise aditi$ git log
+commit 3a121d6fe84a53ef706143de188f89e7effd3fe0
+Merge: 3f2cd33 1757dd1
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 15:38:08 2013 -0400
+
+    Merging eEFSec and SBP2
+
+commit 1757dd136ee4fd6137bd739159ee66b0b041fb46
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 15:03:21 2013 -0400
+
+    Added new file to eEFSec branch
+
+commit 3f2cd33de74fe2758b1aed4d19ccf7513c900746
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 15:01:02 2013 -0400
+
+    Added new file to SBP2 branch.
+
+commit 4720a04bf4f32f7b2d6c18d899cb0a7943c7ba69
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 14:38:50 2013 -0400
+
+Motu:swc_wise aditi$ 
+Motu:swc_wise aditi$ git merge development
+Already up-to-date.
+Motu:swc_wise aditi$ ls
+GTP_activity.txt		science.txt
+Git_Cheat_Sheet_grey.pdf	structure.txt
+Motu:swc_wise aditi$ git branch
+  development
+* master
+Motu:swc_wise aditi$ git merge development -m "Merging development with master"
+Already up-to-date.
+Motu:swc_wise aditi$ git branch
+  development
+* master
+Motu:swc_wise aditi$ git checkout master
+Already on 'master'
+Motu:swc_wise aditi$ git branch -D development
+Deleted branch development (was 4720a04).
+Motu:swc_wise aditi$ git branch
+* master
+Motu:swc_wise aditi$ ls
+GTP_activity.txt		science.txt
+Git_Cheat_Sheet_grey.pdf	structure.txt
+Motu:swc_wise aditi$ https://github.com/dubeyad/swc_wise-june2013.git
+-bash: https://github.com/dubeyad/swc_wise-june2013.git: No such file or directory
+Motu:swc_wise aditi$ touch README.md
+Motu:swc_wise aditi$ git init
+Reinitialized existing Git repository in /Users/aditi/Desktop/swc_wise/.git/
+Motu:swc_wise aditi$ git add README.md
+Motu:swc_wise aditi$ git commit -m "first commit"
+[master a1c46f0] first commit
+ 0 files changed
+ create mode 100644 README.md
+Motu:swc_wise aditi$ git remote add origin https://github.com/dubeyad/swc_wise-june2013.git
+Motu:swc_wise aditi$ git push -u origin master
+Username for 'https://github.com': dubeyad
+Password for 'https://dubeyad@github.com': 
+Counting objects: 23, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (23/23), 554.35 KiB, done.
+Total 23 (delta 7), reused 0 (delta 0)
+To https://github.com/dubeyad/swc_wise-june2013.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Motu:swc_wise aditi$ https://github.com/dubeyad/swc_wise-june2013.git
+-bash: https://github.com/dubeyad/swc_wise-june2013.git: No such file or directory
+Motu:swc_wise aditi$ git clone https://github.com/dubeyad/swc_wise-june2013.git
+Cloning into 'swc_wise-june2013'...
+remote: Counting objects: 29, done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 29 (delta 10), reused 22 (delta 7)
+Unpacking objects: 100% (29/29), done.
+Motu:swc_wise aditi$ nano
+Motu:swc_wise aditi$ cd swc_wise june2013
+-bash: cd: swc_wise: No such file or directory
+Motu:swc_wise aditi$ cd swc_wisejune2013
+-bash: cd: swc_wisejune2013: No such file or directory
+Motu:swc_wise aditi$ swc_wise-june2013
+-bash: swc_wise-june2013: command not found
+Motu:swc_wise aditi$ cd swc_wise-june2013
+Motu:swc_wise-june2013 aditi$ nano names.txt
+Motu:swc_wise-june2013 aditi$ git add names.txt
+Motu:swc_wise-june2013 aditi$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   names.txt
+#
+Motu:swc_wise-june2013 aditi$ git commit -m "Added a new test file to the boot camp repository"
+[master a4f6955] Added a new test file to the boot camp repository
+ 1 file changed, 2 insertions(+)
+ create mode 100644 names.txt
+Motu:swc_wise-june2013 aditi$ git log
+commit a4f6955fe03cc46f9537a7aaae3425e29febc448
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 16:30:12 2013 -0400
+
+    Added a new test file to the boot camp repository
+
+commit b1443ff83e4f1686535074fbaa7bf0e46a5d4d73
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 17:19:57 2013 -0300
+
+    Update README.md
+
+commit b9af349b8ca8328c7e5dc7cb76dc0e7919226063
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 17:18:46 2013 -0300
+
+    Update README.md
+
+commit a1c46f01b4b3c400c3b1a8e4ac54fc5200b5f495
+Author: dubeyad <dubeyad@eden.rutgers.edu>
+Date:   Mon Jun 24 16:17:02 2013 -0400
+
+    first commit
+Motu:swc_wise-june2013 aditi$ 
+Motu:swc_wise-june2013 aditi$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit, working directory clean
+Motu:swc_wise-june2013 aditi$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': dubeyad
+Password for 'https://dubeyad@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/dubeyad/swc_wise-june2013.git
+   b1443ff..a4f6955  master -> master
+Motu:swc_wise-june2013 aditi$ 
+Motu:swc_wise-june2013 aditi$   git config --global push.default matching
+Motu:swc_wise-june2013 aditi$ 
+Motu:swc_wise-june2013 aditi$ To squelch this message and adopt the new behavior now, use:
+-bash: To: command not found
+Motu:swc_wise-june2013 aditi$ 
+Motu:swc_wise-june2013 aditi$   git config --global push.default simple
+Motu:swc_wise-june2013 aditi$ 
+Motu:swc_wise-june2013 aditi$ git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/dubeyad/swc_wise-june2013
+   a4f6955..a2b3a89  master     -> origin/master
+Updating a4f6955..a2b3a89
+Fast-forward
+ names.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+Motu:swc_wise-june2013 aditi$ nano names.txt
+Motu:swc_wise-june2013 aditi$ 
